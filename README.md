@@ -30,7 +30,11 @@ CONTROL DE EXCEPCIONES:
 
 
 
+Importante: 
 
+Se debe modificar manualmente el servidor SQL al que será dirigido. Considerar el archivo appsettings.json: 
+
+ "ApiDatabase": "Server=LAPTOP-3E3ISE6N\\SQLEXPRESS;Database=master;Trusted_Connection=True;"
 
 
 
