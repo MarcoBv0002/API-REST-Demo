@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "23d6eff2-ba23-41ab-8367-7ece652175b1",
+		"name": "Demo API REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15887388"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombres\": \"Marco\",\r\n  \"apellidoPaterno\": \"Brea\",\r\n  \"apellidoMaterno\": \"Velásquez\",\r\n  \"tipoDOI\": 1,\r\n  \"codigoDOI\": \"78011424\",\r\n  \"numeroTelefono\": \"912575726\",\r\n  \"correoElectronico\": \"marcobrea8@gmail.com\",\r\n  \"direccion\": \"Av 7 calle prolongada B7-1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7058/api/v0.1/People/RegisterPerson",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"v0.1",
+						"People",
+						"RegisterPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7058/api/v0.1/People/SearchPerson?TipoDocumento={{TipoDocumentoDemo}}&NumeroDocumento={{NumeroDocumentoDemo}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"v0.1",
+						"People",
+						"SearchPerson"
+					],
+					"query": [
+						{
+							"key": "TipoDocumento",
+							"value": "{{TipoDocumentoDemo}}"
+						},
+						{
+							"key": "NumeroDocumento",
+							"value": "{{NumeroDocumentoDemo}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombres\": \"Marco\",\r\n  \"apellidoPaterno\": \"Brea\",\r\n  \"apellidoMaterno\": \"Velásquez\",\r\n  \"tipoDOI\": 1,\r\n  \"codigoDOI\": \"78011424\",\r\n  \"numeroTelefono\": \"912575726\",\r\n  \"correoElectronico\": \"marcobrea8@gmail.com\",\r\n  \"direccion\": \"Av 7 calle prolongada B7-1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7058/api/v0.1/People/UpdatePerson?NumeroDocumento={{NumeroDocumentoDemo}}&TipoDocumento={{TipoDocumentoDemo}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"v0.1",
+						"People",
+						"UpdatePerson"
+					],
+					"query": [
+						{
+							"key": "NumeroDocumento",
+							"value": "{{NumeroDocumentoDemo}}"
+						},
+						{
+							"key": "TipoDocumento",
+							"value": "{{TipoDocumentoDemo}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nTipoDOI\" : \"1\",\r\n\"cNumeroDOI\" : \"78011433\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7058/api/v0.1/People/DeletePerson",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7058",
+					"path": [
+						"api",
+						"v0.1",
+						"People",
+						"DeletePerson"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
