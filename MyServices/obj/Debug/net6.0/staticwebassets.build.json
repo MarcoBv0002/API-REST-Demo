@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AwsXgBkKPpkiih17MD2UElGMHgVxIRo2R3Q9wH/cCg0=",
+  "Source": "MyServices",
+  "BasePath": "_content/MyServices",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
